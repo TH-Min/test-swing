@@ -23,12 +23,11 @@ export default function Page() {
 //page.js의 기본 export
 //실제 로직은 BoardPage에 위임
 
-async function BoardPage() {
+async function BoardPage() {0
 // 실제 게시판 로직
 // async → 서버에서 DB 조회 가능
 // 브라우저로 이 코드는 내려가지 않음
-
-const supabase = createSupabaseServerClient();
+    const supabase = createSupabaseServerClient();
 //Supabase 연결
 //환경변수 기반으로 Supabase 클라이언트 생성
 //서버에서만 실행됨
