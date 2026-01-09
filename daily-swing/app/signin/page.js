@@ -19,10 +19,11 @@ export default function SignIn() {
 
   const checkAuth = async () => {
     try {
-      const response = await fetch('/api/auth/me');
+      const response = await fetch('/api/auth/me', {
+        credentials: 'include',
+      });
       
       if (!response.ok) {
-        console.warn('인증 응답 오류:', response.status);
         setCheckingAuth(false);
         return;
       }
